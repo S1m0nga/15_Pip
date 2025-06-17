@@ -110,10 +110,26 @@
 
 </head>
 <body>
-<audio id="musica" autoplay loop>
-<source src="musica.mp3" type="audio/mpeg">
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
 </audio>
-<button onclick="toggleAudio()" id="btnMusica">🔊</button>
+
+<button onclick="toggleAudio()" id="btnMusica">🔈</button>
+
+<script>
+  function toggleAudio() {
+    const audio = document.getElementById("musica");
+    const btn = document.getElementById("btnMusica");
+
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "🔊";  // Cambia el ícono al encender
+    } else {
+      audio.pause();
+      btn.textContent = "🔈";  // Cambia el ícono al apagar
+    }
+  }
+</script>
   <header id="inicio" class="active">
     <h1 style="margin-bottom: 10px; animation: fadeIn 2s ease-out; color: white;">Victoria</h1>
     <p style="margin-top: 0; animation: fadeIn 2.5s ease-out; color: white;">Estamos contando los días para celebrar los 15 de Victoria.<br>
