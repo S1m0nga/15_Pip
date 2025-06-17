@@ -65,7 +65,36 @@
       margin: 10px;
       border-radius: 12px;
     }
-  </style>
+  
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    padding-top: 100px;
+    height: auto;
+  }
+  section {
+    padding: 20px 10px;
+  }
+  img {
+    height: auto;
+    max-width: 90%;
+  }
+  #btnMusica {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+</style>
+
 </head>
 <body>
 <audio id="musica" autoplay loop>
@@ -176,7 +205,36 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    padding-top: 100px;
+    height: auto;
+  }
+  section {
+    padding: 20px 10px;
+  }
+  img {
+    height: auto;
+    max-width: 90%;
+  }
+  #btnMusica {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
 </style>
+
 
 <style>
 #btnMusica {
@@ -193,7 +251,36 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
+
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    padding-top: 100px;
+    height: auto;
+  }
+  section {
+    padding: 20px 10px;
+  }
+  img {
+    height: auto;
+    max-width: 90%;
+  }
+  #btnMusica {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
 </style>
+
 <script>
 function toggleAudio() {
   var audio = document.getElementById("musica");
@@ -211,4 +298,33 @@ function toggleAudio() {
 section h2, section p {
   color: #b04b6a !important;
 }
+
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    padding-top: 100px;
+    height: auto;
+  }
+  section {
+    padding: 20px 10px;
+  }
+  img {
+    height: auto;
+    max-width: 90%;
+  }
+  #btnMusica {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
 </style>
+
