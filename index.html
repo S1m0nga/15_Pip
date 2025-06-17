@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -109,7 +110,17 @@
 
   <section id="galeria">
     <h2>Galería de fotos</h2>
-    <p>¡Muy pronto vas a poder ver las mejores fotos de Vicky!</p>
+    <div style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:20px; padding:20px;">
+      <img src="papis.jpeg" alt="familia" style="height:300px; border-radius:12px; scroll-snap-align:center;">
+      <img src="pip.jpeg" alt="Vicky 1" style="height:300px; border-radius:12px; scroll-snap-align:center;">
+      <img src="pip2.jpeg" alt="Vicky 2" style="height:300px; border-radius:12px; scroll-snap-align:center;">
+      <img src="pip3.jpeg" alt="Vicky 3" style="height:300px; border-radius:12px; scroll-snap-align:center;">
+      <img src="pip4.jpeg" alt="Vicky 4" style="height:300px; border-radius:12px; scroll-snap-align:center;">
+    </div>
+    <audio controls autoplay loop>
+      <source src="https://archive.org/download/RaphaelMiGranNoche/Raphael%20-%20Mi%20Gran%20Noche.mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
   </section>
 
   <section id="mapa">
@@ -139,7 +150,7 @@
     <form action="https://formsubmit.co/simonrobertsarg@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="cumple pip">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="/#inicio">
+      <input type="hidden" name="_next" value="https://s1m0nga.github.io/15_Pip/agradecimiento.html">
       <label for="nombre">Nombre y Apellido:</label><br>
       <input type="text" name="Nombre y Apellido" required><br><br>
       <button type="submit" class="btn">Confirmar</button>
