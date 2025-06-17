@@ -11,12 +11,18 @@
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       background: #ffeef5;
-      color: #4d2c3d;
+      color: #ffffff;
       text-align: center;
     }
     header {
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 60px;
       padding: 100px 20px;
-      background: url('https://via.placeholder.com/1500x500/ffeef5/000?text=15+A%C3%B1os+Victoria') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('portada.jpeg') center 28%/cover no-repeat;
     }
     h1 {
       font-family: 'Great Vibes', cursive;
@@ -62,11 +68,15 @@
   </style>
 </head>
 <body>
+<audio id="musica" autoplay loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+<button onclick="toggleAudio()" id="btnMusica">🔊</button>
   <header id="inicio" class="active">
-    <h1>Victoria</h1>
-    <p>Estamos contando los días para celebrar los 15 de Victoria.<br>
+    <h1 style="margin-bottom: 10px; animation: fadeIn 2s ease-out;">Victoria</h1>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;">Estamos contando los días para celebrar los 15 de Victoria.<br>
     Nos llena de felicidad saber que vas a compartirlo con nosotros.</p>
-    <a onclick="mostrar('confirmar')" class="btn">Confirmar asistencia</a>
+    <a onclick="mostrar('confirmar')" class="btn" style="animation: fadeIn 3s ease-out;">Confirmar asistencia</a>
   </header>
 
   <nav>
@@ -82,15 +92,15 @@
 
   <section id="historia">
     <h2>La historia de Vicky</h2>
-    <p>Desde muy chiquita, Vicky soñaba con este día. Cada paso lo dio con alegría y energía. Hoy quiere celebrarlo con vos.</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;">Desde muy chiquita, Vicky soñaba con este día. Cada paso lo dio con alegría y energía. Hoy quiere celebrarlo con vos.</p>
   </section>
 
   <section id="evento">
     <h2>Información del Evento</h2>
-    <p><strong>Fecha:</strong> 8 de noviembre de 2025</p>
-    <p><strong>Hora:</strong> 21:00 hs</p>
-    <p><strong>Lugar:</strong> Jano's Berazategui</p>
-    <p><strong>Dirección:</strong> Calle Rigolleau 2125, Berazategui</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;"><strong>Fecha:</strong> 8 de noviembre de 2025</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;"><strong>Hora:</strong> 21:00 hs</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;"><strong>Lugar:</strong> Jano's Berazategui</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;"><strong>Dirección:</strong> Calle Rigolleau 2125, Berazategui</p>
   </section>
 
   <section id="galeria">
@@ -109,12 +119,12 @@
 
   <section id="codigo">
     <h2>Código de Vestimenta</h2>
-    <p>Formal elegante: traje, vestido largo o corto. ¡Una noche de gala!</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;">Formal elegante: traje, vestido largo o corto. ¡Una noche de gala!</p>
   </section>
 
   <section id="playlist">
     <h2>Playlist colaborativa</h2>
-    <p>Agregá tus temas favoritos a la playlist de Vicky</p>
+    <p style="margin-top: 0; animation: fadeIn 2.5s ease-out;">Agregá tus temas favoritos a la playlist de Vicky</p>
     <a href="https://open.spotify.com/playlist/ENLACE_EJEMPLO" target="_blank" class="btn">Sumate a la playlist</a>
   </section>
 
@@ -160,3 +170,39 @@
   </script>
 </body>
 </html>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<style>
+#btnMusica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c44569;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+</style>
+<script>
+function toggleAudio() {
+  var audio = document.getElementById("musica");
+  if (audio.paused) {
+    audio.play();
+    document.getElementById("btnMusica").textContent = "🔊";
+  } else {
+    audio.pause();
+    document.getElementById("btnMusica").textContent = "🔈";
+  }
+}
+</script>
