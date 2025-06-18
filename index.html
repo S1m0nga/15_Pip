@@ -16,6 +16,7 @@
     }
     
 
+
 header {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('portada.jpeg') center center/cover no-repeat;
@@ -23,10 +24,12 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px 20px 20px 20px;
+  padding-top: 10px;
   text-align: center;
+  position: relative;
   animation: fadeIn 2s ease-out;
 }
+
 
 
     header h1 {
@@ -136,49 +139,13 @@ header {
     }
   
 
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 10px;
-}
 
-
-.box {
-  background: white;
-  padding: 15px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  min-width: 100px;
-  flex-shrink: 0;
-}
 
 .number { font-size: 50px; color: #c44569; }
 .label { font-size: 20px; color: #4b2e3d; margin-top: 10px; }
 
 
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 10px;
-}
 
-
-.box {
-  background: white;
-  padding: 15px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  min-width: 100px;
-  flex-shrink: 0;
-}
 
 .number { font-size: 36px; color: #c44569; }
 .label { font-size: 14px; color: #4b2e3d; margin-top: 8px; }
@@ -188,10 +155,26 @@ header {
 
 
 @media (max-width: 600px) {
-  .countdown { gap: 10px; padding: 5px; }
-  .box { padding: 8px 10px; min-width: 70px; }
+  
   .number { font-size: 26px; }
   .label { font-size: 12px; }
+}
+
+.countdown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px;
+  width: auto;
+  max-width: 90%;
+  overflow-x: auto;
 }
 </style>
 
@@ -209,14 +192,14 @@ header {
   <h1>Victoria</h1>
   <p>Estamos contando los días para celebrar los 15 de Victoria.<br>Nos llena de felicidad saber que vas a compartirlo con nosotros.</p>
   
+
 <div class="countdown" id="countdown">
   <div class="box"><div class="number" id="days">00</div><div class="label">DÍAS</div></div>
   <div class="box"><div class="number" id="hours">00</div><div class="label">HORAS</div></div>
   <div class="box"><div class="number" id="minutes">00</div><div class="label">MINUTOS</div></div>
-  
 </div>
-
 </header>
+
 
 <section>
   <h2>La historia de Vicky</h2>
