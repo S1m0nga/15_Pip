@@ -176,19 +176,99 @@ header {
   max-width: 90%;
   overflow-x: auto;
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.countdown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px 20px;
+  width: auto;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow-x: auto;
+}
+.box {
+  padding: 15px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.number {
+  font-size: 36px;
+  color: #c44569;
+  transition: transform 0.4s ease;
+}
+.number.changed {
+  transform: scale(1.2);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 70%),
+              radial-gradient(circle at 80% 60%, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: shimmer 10s linear infinite;
+  z-index: 0;
+}
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#loader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #ffeef5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 </style>
 
 
 
 </head>
 <body>
+<div id="loader">
+  <h1 style="font-family: 'Great Vibes', cursive; font-size: 48px; color: #c44569;">Victoria 15</h1>
+</div>
+
 
 <audio id="musica" loop>
   <source src="musica.mp3" type="audio/mpeg">
 </audio>
 <button id="btnMusica" onclick="toggleAudio()">🔈</button>
 
-<header>
+<header class="fade-in">
   <h1>Victoria</h1>
   <p>Estamos contando los días para celebrar los 15 de Victoria.<br>Nos llena de felicidad saber que vas a compartirlo con nosotros.</p>
   
@@ -206,8 +286,8 @@ header {
   <p>Desde muy chiquita, Vicky soñaba con este día. Cada paso lo dio con alegría y energía. Hoy quiere celebrarlo con vos.</p>
 </section>
 
-<section>
-  <h2>Información del Evento</h2>
+<section style="text-align: left;">
+  <h2 style="text-align: center;">Información del Evento</h2>
   <p><strong>Fecha:</strong> 8 de noviembre de 2025</p>
   <p><strong>Hora:</strong> 21:30 hs</p>
   <p><strong>Lugar:</strong> Jano's Berazategui</p>
@@ -282,5 +362,11 @@ setInterval(function() {
 }, 1000);
 </script>
 
+
+<script>
+window.addEventListener("load", function(){
+  document.getElementById("loader").style.display = "none";
+});
+</script>
 </body>
 </html>
