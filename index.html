@@ -78,15 +78,18 @@ header {
       transform: scale(1.05);
     }
     .galeria-horizontal {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
+      
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+justify-items: center;
+
       padding: 20px 0;
     }
     .galeria-horizontal img {
-      height: 300px;
+      width: 90%; height: auto; aspect-ratio: 2/3; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;
       border-radius: 15px;
-      flex-shrink: 0;
+      
       transition: transform 0.3s ease;
     }
     .galeria-horizontal img:hover {
@@ -216,7 +219,7 @@ header {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
   min-width: 100px;
-  flex-shrink: 0;
+  
 }
 
 .number {
@@ -252,7 +255,12 @@ header::after {
   align-items: center;
   z-index: 999;
 }
+
+.galeria-horizontal img:hover {
+  transform: scale(1.05);
+}
 </style>
+
 
 
 
@@ -281,11 +289,6 @@ header::after {
 </header>
 
 
-<section>
-  <h2>La historia de Vicky</h2>
-  <p>Desde muy chiquita, Vicky soñaba con este día. Cada paso lo dio con alegría y energía. Hoy quiere celebrarlo con vos.</p>
-</section>
-
 <section style="text-align: left;">
   <h2 style="text-align: center;">Información del Evento</h2>
   <p><strong>Fecha:</strong> 8 de noviembre de 2025</p>
@@ -312,7 +315,9 @@ header::after {
     <img src="pip2.jpeg">
     <img src="pip3.jpeg">
     <img src="pip4.jpeg">
-  </div>
+  
+<img src="pip5.jpeg" alt="Foto 6">
+</div>
 </section>
 
 <section>
