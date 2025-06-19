@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,24 +13,18 @@
       color: #4b2e3d;
       overflow-x: hidden;
     }
-    
-
-
-header {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('portada.jpeg') center center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 10px;
-  text-align: center;
-  position: relative;
-  animation: fadeIn 2s ease-out;
-}
-
-
-
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('portada.jpeg') center center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 80px;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 2s ease-out;
+    }
     header h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 60px;
@@ -78,18 +71,14 @@ header {
       transform: scale(1.05);
     }
     .galeria-horizontal {
-      
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-justify-items: center;
-
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
       padding: 20px 0;
     }
     .galeria-horizontal img {
-      width: 90%; height: auto; aspect-ratio: 2/3; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;
-      border-radius: 15px;
-      
+      width: 90%; height: auto; aspect-ratio: 2/3; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
     .galeria-horizontal img:hover {
@@ -116,15 +105,6 @@ justify-items: center;
       border: 2px solid #ddd;
       border-radius: 10px;
     }
-    .contador {
-      font-size: 30px;
-      background: rgba(0,0,0,0.5);
-      padding: 15px 30px;
-      border-radius: 30px;
-      color: #fff;
-      margin-top: 20px;
-      display: inline-block;
-    }
     #btnMusica {
       position: fixed;
       bottom: 20px;
@@ -140,154 +120,68 @@ justify-items: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       z-index: 999;
     }
-  
-
-
-
-.number { font-size: 50px; color: #c44569; }
-.label { font-size: 20px; color: #4b2e3d; margin-top: 10px; }
-
-
-
-
-.number { font-size: 36px; color: #c44569; }
-.label { font-size: 14px; color: #4b2e3d; margin-top: 8px; }
-
-
-
-
-
-@media (max-width: 600px) {
-  
-  .number { font-size: 26px; }
-  .label { font-size: 12px; }
-}
-
-.countdown {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 20px;
-  padding: 10px;
-  width: auto;
-  max-width: 90%;
-  overflow-x: auto;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1.2s ease-out forwards;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.countdown {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 20px;
-  padding: 10px 20px;
-  width: auto;
-  max-width: 90%;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  overflow-x: auto;
-}
-.box {
-  padding: 15px 20px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-  min-width: 100px;
-  
-}
-
-.number {
-  font-size: 36px;
-  color: #c44569;
-  transition: transform 0.4s ease;
-}
-.number.changed {
-  transform: scale(1.2);
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 70%),
-              radial-gradient(circle at 80% 60%, rgba(255,255,255,0.1) 0%, transparent 70%);
-  animation: shimmer 10s linear infinite;
-  z-index: 0;
-}
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-#loader {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: #ffeef5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.galeria-horizontal img:hover {
-  transform: scale(1.05);
-}
-</style>
-
-
-
-
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 70%),
+                  radial-gradient(circle at 80% 60%, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: shimmer 10s linear infinite;
+      z-index: 0;
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    #loader {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #ffeef5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
 <div id="loader">
   <h1 style="font-family: 'Great Vibes', cursive; font-size: 48px; color: #c44569;">Victoria 15</h1>
 </div>
 
-
 <audio id="musica" loop>
   <source src="musica.mp3" type="audio/mpeg">
 </audio>
 <button id="btnMusica" onclick="toggleAudio()">🔈</button>
 
-<header class="fade-in">
+<header>
   <h1>Victoria</h1>
   <p>Estamos contando los días para celebrar los 15 de Victoria.<br>Nos llena de felicidad saber que vas a compartirlo con nosotros.</p>
-  
-
-<div class="countdown" id="countdown">
-  <div class="box"><div class="number" id="days">00</div><div class="label">DÍAS</div></div>
-  <div class="box"><div class="number" id="hours">00</div><div class="label">HORAS</div></div>
-  <div class="box"><div class="number" id="minutes">00</div><div class="label">MINUTOS</div></div>
-</div>
 </header>
 
+
+<section>
+  <h2>Cuenta Regresiva</h2>
+  <div id="countdown" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+    <div style="background: white; padding: 30px 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); min-width: 120px;">
+      <div style="font-size: 48px; color: #c44569;" id="days">00</div>
+      <div style="font-size: 20px;">DÍAS</div>
+    </div>
+    <div style="background: white; padding: 30px 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); min-width: 120px;">
+      <div style="font-size: 48px; color: #c44569;" id="hours">00</div>
+      <div style="font-size: 20px;">HORAS</div>
+    </div>
+    <div style="background: white; padding: 30px 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); min-width: 120px;">
+      <div style="font-size: 48px; color: #c44569;" id="minutes">00</div>
+      <div style="font-size: 20px;">MINUTOS</div>
+    </div>
+    <div style="background: white; padding: 30px 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); min-width: 120px;">
+      <div style="font-size: 48px; color: #c44569;" id="seconds">00</div>
+      <div style="font-size: 20px;">SEGUNDOS</div>
+    </div>
+  </div>
+</section>
 
 <section style="text-align: left;">
   <h2 style="text-align: center;">Información del Evento</h2>
@@ -315,9 +209,8 @@ header::after {
     <img src="pip2.jpeg">
     <img src="pip3.jpeg">
     <img src="pip4.jpeg">
-  
-<img src="pip5.jpeg" alt="Foto 6">
-</div>
+    <img src="pip5.jpeg">
+  </div>
 </section>
 
 <section>
@@ -344,34 +237,31 @@ function toggleAudio() {
     btn.textContent = "🔈";
   }
 }
-const countDownDate = new Date("Nov 8, 2025 21:00:00").getTime();
-setInterval(function() {
-  const now = new Date().getTime();
-  const distance = countDownDate - now;
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  
-  
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  
-  // 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  
-  // document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  
-}, 1000);
-</script>
-
-
-<script>
 window.addEventListener("load", function(){
   document.getElementById("loader").style.display = "none";
 });
 </script>
+
+
+<script>
+const countdownDate = new Date("2025-11-08T21:30:00").getTime();
+const countdownFunction = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+  if (distance < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
