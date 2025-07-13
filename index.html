@@ -5,20 +5,21 @@
   <title>15 años de Victoria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #ffeef5, #fff8fb);
-      color: #4b2e3d;
+      background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+      color: #ffffff;
       overflow-x: hidden;
     }
     header {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('portada.jpeg') center center/cover no-repeat;
+      background: black;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       padding-bottom: 80px;
       text-align: center;
@@ -28,16 +29,16 @@
     header h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 60px;
-      color: white;
+      color: #ffffff;
       margin-bottom: 10px;
     }
     header p {
       font-size: 22px;
-      color: white;
+      color: #ffffff;
       max-width: 700px;
     }
     section {
-      background: white;
+      background: #1c1c1c;
       margin: 40px auto;
       padding: 50px 30px;
       border-radius: 20px;
@@ -48,7 +49,7 @@
     h2 {
       font-family: 'Dancing Script', cursive;
       font-size: 42px;
-      color: #c44569;
+      color: #ffffff;
       margin-bottom: 10px;
     }
     p, label {
@@ -56,8 +57,8 @@
       margin-bottom: 15px;
     }
     .btn {
-      background: #c44569;
-      color: white;
+      background: #ffffff;
+      color: #ffffff;
       padding: 14px 30px;
       font-size: 18px;
       border-radius: 50px;
@@ -67,7 +68,7 @@
       transition: transform 0.3s, background 0.3s;
     }
     .btn:hover {
-      background: #a12f52;
+      background: #cccccc;
       transform: scale(1.05);
     }
     .galeria-horizontal {
@@ -109,8 +110,8 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #c44569;
-      color: white;
+      background-color: #ffffff;
+      color: #ffffff;
       border: none;
       border-radius: 50%;
       width: 50px;
@@ -137,7 +138,7 @@
     #loader {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: #ffeef5;
+      background: #1c1c1c;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -157,28 +158,28 @@
 .fila {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   flex-wrap: nowrap;
 }
 .box {
-  background: white;
-  padding: 20px 30px;
+  background: #1c1c1c;
+  padding: 30px 40px;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   min-width: 100px;
   flex-shrink: 0;
 }
 .number {
-  font-size: 42px;
-  color: #c44569;
+  font-size: 56px;
+  color: #ffffff;
 }
 .label {
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 500px) {
-  .box { padding: 10px 15px; min-width: 60px; }
-  .number { font-size: 28px; }
-  .label { font-size: 14px; }
+  .box { padding: 30px 40px; min-width: 60px; }
+  .number { font-size: 56px; }
+  .label { font-size: 20px; }
 }
 </style>
 
@@ -186,7 +187,7 @@
 </head>
 <body>
 <div id="loader">
-  <h1 style="font-family: 'Great Vibes', cursive; font-size: 48px; color: #c44569;">Victoria 15</h1>
+  <h1 style="font-family: 'Great Vibes', cursive; font-size: 48px; color: #ffffff;">Victoria 15</h1>
 </div>
 
 <audio id="musica" loop>
@@ -195,31 +196,30 @@
 <button id="btnMusica" onclick="toggleAudio()">🔈</button>
 
 <header>
-  <h1>Victoria</h1>
-  <p>Estamos contando los días para celebrar los 15 de Victoria.<br>Nos llena de felicidad saber que vas a compartirlo con nosotros.</p>
+  <h1 style="font-size: 48px; text-transform: uppercase; font-family: 'Playfair Display', serif;">Mis 15</h1>
+  <h1 style="font-size: 48px; text-transform: uppercase; font-family: 'Playfair Display', serif;">Victoria</h1>
+  
+
+<div class="countdown-container">
+  <div class="fila fila-unica">
+    <div class="box"><div class="number" id="days">00</div><div class="label">DÍAS</div></div>
+    <div class="box"><div class="number" id="hours">00</div><div class="label">HORAS</div></div>
+    <div class="box"><div class="number" id="minutes">00</div><div class="label">MINUTOS</div></div>
+    <div class="box"><div class="number" id="seconds">00</div><div class="label">SEGUNDOS</div></div>
+  </div>
+</div>
+
 </header>
 
 
 
 
-<section>
-  <h2>Cuenta Regresiva</h2>
-  <div class="countdown-container">
-    <div class="fila fila-superior">
-      <div class="box"><div class="number" id="days">00</div><div class="label">DÍAS</div></div>
-      <div class="box"><div class="number" id="hours">00</div><div class="label">HORAS</div></div>
-    </div>
-    <div class="fila fila-inferior">
-      <div class="box"><div class="number" id="minutes">00</div><div class="label">MINUTOS</div></div>
-      <div class="box"><div class="number" id="seconds">00</div><div class="label">SEGUNDOS</div></div>
-    </div>
-  </div>
-</section>
+
 
 
 
 <section style="text-align: left;">
-  <h2 style="text-align: center;">Información del Evento</h2>
+  <h2 style="text-align: center;">¿Cuándo?</h2>
   <p><strong>Fecha:</strong> 8 de noviembre de 2025</p>
   <p><strong>Hora:</strong> 21:30 hs</p>
   <p><strong>Lugar:</strong> Jano's Berazategui</p>
@@ -227,7 +227,7 @@
 </section>
 
 <section>
-  <h2>Cómo llegar</h2>
+  <h2>¿Dónde?</h2>
   <iframe src="https://www.google.com/maps?q=Rigolleau+2125,+Berazategui,+Buenos+Aires,+Argentina&output=embed"></iframe>
 </section>
 
@@ -236,17 +236,7 @@
   <p>Elegante.</p>
 </section>
 
-<section>
-  <h2>Galería</h2>
-  <div class="galeria-horizontal">
-    <img src="papis.jpeg">
-    <img src="pip.jpeg">
-    <img src="pip2.jpeg">
-    <img src="pip3.jpeg">
-    <img src="pip4.jpeg">
-    <img src="pip5.jpeg">
-  </div>
-</section>
+
 
 <section>
   <h2>Confirmar asistencia</h2>
