@@ -147,16 +147,29 @@
   
 
 @media (max-width: 768px) {
-  .fila-unica {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px !important;
-  }
-  .box {
-    padding: 15px 20px !important;
-    min-width: 90px !important;
-  }
+  
+
+.fila-unica {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: nowrap;
+}
+
+
+  
+.box {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: auto;
+  flex-shrink: 0;
+  text-align: center;
+}
+
   .number {
     font-size: 28px !important;
   }
@@ -165,15 +178,29 @@
   }
 }
 
-  .fila-unica {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px !important;
-  }
-  .box {
-    padding: 20px 25px !important;
-    min-width: 140px !important;
-  }
+  
+
+.fila-unica {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: nowrap;
+}
+
+
+  
+.box {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: auto;
+  flex-shrink: 0;
+  text-align: center;
+}
+
   .number {
     font-size: 36px !important;
   }
@@ -205,25 +232,40 @@
   gap: 40px;
   flex-wrap: nowrap;
 }
+
 .box {
-  background: #1c1c1c;
-  padding: 20px 25px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  min-width: 100px;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: auto;
   flex-shrink: 0;
+  text-align: center;
 }
+
 .number {
-  font-size: 32px;
+  font-size: 18px;
   color: #ffffff;
 }
 .label {
-  font-size: 14px;
+  font-size: 8px;
 }
 @media (max-width: 500px) {
-  .box { padding: 30px 40px; min-width: 60px; }
-  .number { font-size: 56px; }
-  .label { font-size: 20px; }
+  
+.box {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: auto;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+  .number {
+  font-size: 18px; }
+  .label {
+  font-size: 8px; }
 }
 </style>
 
