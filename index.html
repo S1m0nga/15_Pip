@@ -144,7 +144,35 @@
       align-items: center;
       z-index: 999;
     }
-  </style>
+  
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px !important;
+  }
+  .fila-unica {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px !important;
+  }
+  .box {
+    padding: 20px 25px !important;
+    min-width: 140px !important;
+  }
+  .number {
+    font-size: 36px !important;
+  }
+  .label {
+    font-size: 16px !important;
+  }
+  section {
+    padding: 30px 15px !important;
+    margin: 20px 10px !important;
+  }
+  input[type="text"] {
+    width: 95% !important;
+  }
+}
+</style>
 
 
 <style>
