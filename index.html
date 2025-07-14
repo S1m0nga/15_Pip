@@ -145,10 +145,26 @@
       z-index: 999;
     }
   
+
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 32px !important;
+  .fila-unica {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px !important;
   }
+  .box {
+    padding: 15px 20px !important;
+    min-width: 90px !important;
+  }
+  .number {
+    font-size: 28px !important;
+  }
+  .label {
+    font-size: 12px !important;
+  }
+}
+
   .fila-unica {
     flex-direction: column;
     align-items: center;
@@ -191,18 +207,18 @@
 }
 .box {
   background: #1c1c1c;
-  padding: 30px 40px;
+  padding: 20px 25px;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   min-width: 100px;
   flex-shrink: 0;
 }
 .number {
-  font-size: 56px;
+  font-size: 32px;
   color: #ffffff;
 }
 .label {
-  font-size: 20px;
+  font-size: 14px;
 }
 @media (max-width: 500px) {
   .box { padding: 30px 40px; min-width: 60px; }
