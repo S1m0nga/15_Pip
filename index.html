@@ -14,7 +14,6 @@
       overflow-x: hidden;
     }
     header {
-  height: 50vh;
       background: black;
       display: flex;
       flex-direction: column;
@@ -34,14 +33,12 @@
     header p {
       font-size: 22px;
       color: #ffffff;
-      max-width: 700px;
     }
     section {
       background: #1c1c1c;
       margin: 40px auto;
       padding: 50px 30px;
       border-radius: 20px;
-      max-width: 1000px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
       text-align: center;
     }
@@ -78,7 +75,6 @@
       padding: 20px 0;
     }
     .galeria-horizontal img {
-      width: 90%; height: auto; aspect-ratio: 2/3; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
     .galeria-horizontal img:hover {
@@ -87,8 +83,6 @@
     iframe {
       border: none;
       border-radius: 15px;
-      width: 100%;
-      height: 400px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     form {
@@ -98,8 +92,6 @@
     }
     input[type="text"] {
       padding: 10px;
-      width: 80%;
-      max-width: 500px;
       font-size: 18px;
       margin-bottom: 10px;
       border: 2px solid #ddd;
@@ -113,8 +105,6 @@
       color: #ffffff;
       border: none;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
       font-size: 24px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
@@ -145,7 +135,6 @@
     }
   
 
-@media (max-width: 768px) {
   
 
 .fila-unica {
@@ -164,7 +153,6 @@
   padding: 0;
   box-shadow: none;
   border-radius: 0;
-  min-width: auto;
   flex-shrink: 0;
   text-align: center;
 }
@@ -195,7 +183,6 @@
   padding: 0;
   box-shadow: none;
   border-radius: 0;
-  min-width: auto;
   flex-shrink: 0;
   text-align: center;
 }
@@ -211,16 +198,29 @@
     margin: 20px 10px !important;
   }
   input[type="text"] {
-    width: 95% !important;
   }
 }
 
-    @media (max-width: 768px) {
         h1 {
             margin-top: 15% !important;
         }
     }
-    </style>
+    
+    .icon {
+        vertical-align: middle;
+        margin-right: 10px;
+        color: #ffffffcc;
+    }
+    
+    .icon {
+        color: #ffffffcc;
+        fill: none;
+        stroke: currentColor;
+        display: inline-block;
+    }
+    
+    width: 64px;
+    height: 64px;</style>
 <style>
 .countdown-container {
   display: flex;
@@ -297,21 +297,27 @@
 </div>
 </header>
 <section style="text-align: left;">
-<h2 style="text-align: center;">🗓️ ¿Cuándo?</h2>
+<h2 style="text-align: center;"><svg class="icon" fill="none" height="64" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 12px; vertical-align: middle;" viewbox="0 0 24 24" width="64" xmlns="http://www.w3.org/2000/svg">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line></svg>¿Cuándo?</h2>
 <p><strong>Fecha:</strong> 8 de noviembre de 2025</p>
 <p><strong>Hora:</strong> 21:30 hs</p>
 <p><strong>Lugar:</strong> Jano's Berazategui</p>
 </section>
 <section>
-<h2>📍 ¿Dónde?</h2>
+<h2></h2>
 <iframe height="480" src="https://www.google.com/maps/d/embed?mid=13RxRVlA-R0vUQ-ZdSgsCwSMfvtaeNag&amp;ehbc=2E312F&amp;noprof=1" width="640"></iframe>
 </section>
 <section>
-<h2>👗 Dress Code</h2>
+<h2>Dress Code</h2>
 <p>Elegante.</p>
 </section>
 <section>
-<h2>✅ Confirmar asistencia</h2>
+<h2><svg class="icon" fill="none" height="64" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 12px; vertical-align: middle;" viewbox="0 0 24 24" width="64" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2 11 13"></path>
+<path d="m22 2-7 20-4-9-9-4 20-7Z"></path></svg>Confirmar asistencia</h2>
 <form action="https://formsubmit.co/simonrobertsarg@gmail.com" method="POST">
 <input name="_subject" type="hidden" value="cumple pip"/>
 <input name="_captcha" type="hidden" value="false"/>
